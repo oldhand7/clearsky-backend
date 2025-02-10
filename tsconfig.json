@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "commonjs",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "typeRoots": ["./src/types", "./node_modules/@types"], // Ensure custom and @types are used
+    "types": ["node", "ws"] // Include specific types for Node.js, WebSocket, and dotenv
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
+}
