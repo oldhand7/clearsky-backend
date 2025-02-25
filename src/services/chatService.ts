@@ -8,10 +8,10 @@ import { createClient } from 'redis';
 // Initialize Redis Cloud client and Prisma client
 const redis = createClient({
     username: 'default', // Redis Cloud typically uses 'default' for the username
-    password: 'RbrZCqeVsf2Iq0WdtDQ3ZFccgdQzNIt7', // Replace with your Redis Cloud password
+    password: 'a1IR91No9FV9iZMlS93GYXh3JXvW2JM7', // Replace with your Redis Cloud password
     socket: {
-        host: 'redis-18971.c277.us-east-1-3.ec2.redns.redis-cloud.com',
-        port: 18971 // Replace with your Redis Cloud port (e.g., 18971)
+        host: 'redis-17578.c16.us-east-1-2.ec2.redns.redis-cloud.com',
+        port: 17578 // Replace with your Redis Cloud port (e.g., 18971)
     }
 });
 
