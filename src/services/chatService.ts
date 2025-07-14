@@ -4,17 +4,17 @@ import { Pinecone as PineconeClient } from "@pinecone-database/pinecone";
 import { logger } from "../helpers/logger";
 import { get_embedding } from "./pineconeService";
 import { createClient } from 'redis';
+import dotenv from "dotenv";
 
 // Initialize Redis Cloud client and Prisma client
 const redis = createClient({
-    username: 'default', // Redis Cloud typically uses 'default' for the username
-    password: 'a1IR91No9FV9iZMlS93GYXh3JXvW2JM7', // Replace with your Redis Cloud password
-    socket: {
-        host: 'redis-17578.c16.us-east-1-2.ec2.redns.redis-cloud.com',
-        port: 17578 // Replace with your Redis Cloud port (e.g., 18971)
-    }
+  username: process.env.REDIS_USERNAME,
+  password: process.env.REDIS_PASSWORD,
+  socket: {
+    host: process.env.REDIS_HOST,
+    port: Number(process.env.REDIS_PORT),
+  },
 });
-
 const prisma = new PrismaClient();
 
 redis.on('error', (err) => logger.error('Redis Client Error:', err));

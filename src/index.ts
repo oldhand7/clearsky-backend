@@ -72,7 +72,7 @@ wss.on("connection", (ws: WebSocket) => {
 
 // Welcome route
 app.get("/", (req: Request, res: Response) => {
-  res.status(200).json({ message: "Welcome to the ClearSky API! 1.0.0" });
+  res.status(200).json({ message: "Welcome to the Siteware API! 1.0.0" });
 });
 
 // Serve files via a download route

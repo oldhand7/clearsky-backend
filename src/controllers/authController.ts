@@ -215,7 +215,7 @@ const generateEmailTemplate = (otp: string): string => {
         <p>If you did not request this, please ignore this email.</p>
         <div class="footer">
           <p>Thank you!</p>
-          <p>ClearSky</p>
+          <p>Siteware</p>
         </div>
       </div>
     </body>
